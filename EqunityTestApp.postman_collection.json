@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "e42b69e1-567c-43ad-916b-ff856fa5fb83",
+		"name": "EqunityTestApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{eqLocalApi}}",
+					"host": [
+						"{{eqLocalApi}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "second",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{eqLocalApi}}/d2032222-47a6-4048-9894-11ab8ebb9f69",
+					"host": [
+						"{{eqLocalApi}}"
+					],
+					"path": [
+						"d2032222-47a6-4048-9894-11ab8ebb9f69"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{eqLocalApi}}/d2032222-47a6-4048-9894-11ab8ebb9f69",
+					"host": [
+						"{{eqLocalApi}}"
+					],
+					"path": [
+						"d2032222-47a6-4048-9894-11ab8ebb9f69"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ApplicationId",
+							"value": "197104",
+							"type": "text"
+						},
+						{
+							"key": "Type",
+							"value": "Lukasz2",
+							"type": "text"
+						},
+						{
+							"key": "Summary",
+							"value": "Payment",
+							"type": "text"
+						},
+						{
+							"key": "Amount",
+							"value": "50.09",
+							"type": "text"
+						},
+						{
+							"key": "PostingDate",
+							"value": "2016-08-01T00:00:00",
+							"type": "text"
+						},
+						{
+							"key": "IsCleared",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "ClearedDate",
+							"value": "2016-08-02T00:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{eqLocalApi}}",
+					"host": [
+						"{{eqLocalApi}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "8dfe1504-682c-407e-b7b2-1f7bac605832",
+			"key": "eqLocalApi",
+			"value": "http://localhost:64874/api/transactions",
+			"type": "string"
+		}
+	]
+}
